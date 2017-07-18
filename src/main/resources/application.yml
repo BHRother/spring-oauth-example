@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  context-path: /spring-oauth
+
+spring:
+  thymeleaf:
+    check-template-location: true
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
+  groovy:
+    template:
+      check-template-location: false
+
+mongo:
+  host: localhost
+  port: 27017
+  dbName: oauth

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <title>Spring Security Home</title>
+</head>
+<body>
+<h1>Welcome!</h1>
+
+<div sec:authorize="hasRole('ROLE_USER')">
+    <p>Click <a th:href="@{/user/hello}">here</a> to see a greeting user.</p>
+    <br/>
+</div>
+
+<div sec:authorize="hasRole('ROLE_ADMIN')">
+    <p>Click <a th:href="@{/admin/home}">here</a> to see go to admin page.</p>
+    <br/>
+</div>
+
+</body>
+</html>
